@@ -29,11 +29,11 @@
                         <div class="item">
                             <a href="{{product.get_absolute_url}}" class="home-card">
                                 <h5 class="title-card">{{product.name}}</h5>
-                                <img src="{{ product.image.url }}" alt="" class="card-img" style="max-height: 250px; width: auto;">
+                                <img src="{{ product.image.url }}" alt="" class="card-img">
                                 {% if product.discount %}
                                     <div class="card-discount">
-                                        <p class="line">руб.{{ product.price }}</p>
-                                        <p>{{ product.sell_price }}</p>
+                                        <p class="line">{{ product.price }} ₽</p>
+                                        <p>{{ product.sell_price }} ₽</p>
                                     </div>
                                 {% else %}
                                     <p class="price">{{ product.price }} ₽</p>
@@ -44,8 +44,23 @@
                     {% endfor %}
                 </div>
             </div>
+       
+            <ul class="pagination">
+                <li class="{% if not products.has_previous %}disabled{% endif %}">
+                    <a href="{% if products.has_previous %}?page={{ products.previous_page_number }}{% endif %}">Назад</a>
+                </li>
+                {% for page in products.paginator.page_range %}
+                    {% if page >= products.number|add:-2 and page <= products.number|add:2 %}
+                        <li>
+                            <a href="?page={{ page }}" class="{% if products.number == page %}disabled{% endif %}">{{ page }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                <li class="{% if not products.has_next %}disabled{% endif %}">
+                    <a href="{% if products.has_next %}?page={{ products.next_page_number }}{% endif %}">Далее</a>
+                </li>
+            </ul>
         </div>
-
     </div>
 
 {% endblock content %}

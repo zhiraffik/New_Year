@@ -19,11 +19,11 @@
                 <a href="{{ product.get_absolute_url }}" class="home-card">
                     
                     <h5 class="title-card"> {{ product.name }} </h5>
-                    <img src="{{ product.image.url }}" alt="" class="card-img" style="max-height: 250px; width: auto;">
+                    <img src="{{ product.image.url }}" alt="" class="card-img">
                     {% if product.discount %}
-                        <div class="cart-discount">
-                            <p class="line">{{ product.price }}</p>
-                            <p>{{ product.sell_price }}</p>
+                        <div class="card-discount">
+                            <p class="line">{{ product.price }} ₽</p>
+                            <p>{{ product.sell_price }} ₽</p>
                         </div>
                     {% else %}
                         <p class="price">{{ product.price }} ₽</p>
