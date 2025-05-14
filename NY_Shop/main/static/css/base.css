@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    overflow-x:hidden;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 36px;
+
+}
+
+
+h5{
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.header{
+    background-color: #DE6262;
+
+ 
+    
+}
+
+.header-logo{
+    color: #DE6262;
+}
+
+.header-container{
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    color: white;
+}
+
+.nav-a{
+    color: white;
+    padding-left: 90px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+/* Мб убрать */
+.container{
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Карточки товаров */
+
+.home-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+    
+}
+
+.home-card{
+    min-width: 200px; 
+    width: 350px;
+    height: 268px;
+    background-color: #EACC8A;
+    border-radius: 15px;
+  
+}
+.title-card{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-img{
+    height: 170px;
+    width: 100px;
+    max-height:100px ;
+    max-width:140px ;
+}   
+
+.price{
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+}
+

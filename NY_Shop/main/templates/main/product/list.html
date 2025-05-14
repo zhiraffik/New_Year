@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Shop{% endblock title %}
+
+{% block content %}
+    <div class="list">
+        <div class="sidebar">
+            <h3>Категории</h3>
+            <ul>
+                <li {% if not category %}class="selected"{% endif %}>
+                    <a href="{% url "main:product_list" %}">Все товары</a>
+                </li>
+                {% for c in categories %}
+                    <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                        <a href="{{ c.get_absolute_url}}">{{ c.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="main-title">
+                {% if category %}{{ category.name}}{%else%}Товары{% endif %}
+            </div>
+            <div class="product-list">
+                <div class="item">
+                    {% for product in products %}
+                        <div class="item">
+                            <a href="{{product.get_absolute_url}}" class="home-card">
+                                <h5 class="title-card">{{product.name}}</h5>
+                                <img src="{{ product.image.url }}" alt="" class="card-img" style="max-height: 250px; width: auto;">
+                                {% if product.discount %}
+                                    <div class="card-discount">
+                                        <p class="line">руб.{{ product.price }}</p>
+                                        <p>{{ product.sell_price }}</p>
+                                    </div>
+                                {% else %}
+                                    <p class="price">{{ product.price }} ₽</p>
+                                {% endif %}
+                            </a> 
+                        </div>
+                    
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}
