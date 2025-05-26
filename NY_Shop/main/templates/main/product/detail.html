@@ -8,7 +8,7 @@
 {% block content %}
     <div class="detail-product">
         <div class="detail-img">
-            <img src="{% if product.image %}{{ product.image.url }}{% endif %}" alt="" class="detail-image">
+            <img src="{% if product.image %}{{ product.image.url }}{% endif %}" alt="" class="detail-image" height="400" width="400">
         </div>
         <div class="detail-description">
             <h2>{{ product.name }}</h2>
@@ -24,7 +24,13 @@
                 <p class="price">{{ product.price }} ₽</p>
             {% endif %}
             
-            <a href="#" class="cart-btn">Добавить в корзину</a>
+            <form action="{% url "cart:cart_add" product.id %}" class="qform" method="post">
+                <div class="cart-form">
+                    {{ cart_product_form }}
+                    {% csrf_token %}
+                </div>
+                <input type="submit" class="add-to-cart-btn" value="Добавить в корзину">
+            </form>
         </div>
     </div>
 {% endblock content %}

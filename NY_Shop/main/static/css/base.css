@@ -102,6 +102,7 @@ h5{
 .card-img{
     height: 40%;
     width: 40%;
+    
 }   
 
 .price{
@@ -141,4 +142,21 @@ h5{
 
 .disabled {
     opacity: 0.2;
+}
+
+.detail-image{
+    width: 400px;
+    height: 400px;
+}
+
+.add-to-cart-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
