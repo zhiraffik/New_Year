@@ -13,7 +13,7 @@
             {% with product=item.product %}
                 <div class="cart-card d-flex">
                     <div class="cart-card-img">
-                        <img src="{% if product.image %}{{ product.image.url }}{% endif %}" alt="" class="detail-image">
+                        <img src="{% if product.image %}{{ product.image.url }}{% endif %}" alt="" class="detail-image" height="200" width="200">
                     </div>
                     <div class="cart-card-info">
                         <div class="cart-card-name">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="total">
-            <h5>Итого:{{ cart.get_total_price }} ₽</h5>
+            <h5>Итого:   {{ cart.get_total_price }}  ₽</h5>
         </div>
 
         <div class="cart-buttons d-flex gap-3">
