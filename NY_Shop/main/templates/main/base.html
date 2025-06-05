@@ -28,9 +28,7 @@
                 <li>
                     <a href="#" class="nav-a m-3">Скидки</a>
                 </li>
-                <li>
-                    <a href="#" class="nav-a m-3">Акции</a>
-                </li>
+               
                 <li>
                     <a href="#" class="nav-a m-3">Контакты</a>
                 </li>
@@ -40,7 +38,7 @@
             
             <div class="header-profile">
                 <a href="{% url "cart:cart_detail" %}"><img src="{% static 'img/cart.png' %}" class="cart-img" alt="" width="70px"></a>
-                <a href="#" class="m-3">Войти</a>
+                
                 <p class="cart_quantity">
                 {% with cart_quantity=cart|length %}
                     {% if cart_quantity  > 0%}

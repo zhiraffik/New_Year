@@ -51,16 +51,16 @@ h5{
     max-width: 1440px;
     margin: 0 auto;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 1%;
     align-items: center;
     color: white;
 }
 
 .nav-a{
     color: white;
-    padding-left: 90px;
+    padding-left: 10%;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5em;
 }
 
 
@@ -102,7 +102,7 @@ h5{
 .card-img{
     height: 40%;
     width: 40%;
-    
+    background-color: #DE6262;
 }   
 
 .price{
@@ -525,6 +525,9 @@ h5{
     background: #388E3C;
 }
 
+.home-title, .rec-title{
+    margin-left: 20%;
+}
 
 /* корзина */
 .cart {
@@ -675,7 +678,19 @@ h5{
     .product-header {
         padding: 15px;
     }
-    
+    .nav-a{
+        font-size: 0.8em;
+    }
+    .cart-img{
+        transform: scale(0.7)
+    }
+    .header-logo{
+        transform: scale(0.6);
+    }
+   
+    .item{
+        margin-left: 5%;
+    }
     .product-header h1 {
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -751,5 +766,26 @@ h5{
         width: 100%;
     }
     
+
+    .header-container{
+        width: 100%;
+    }
     /* корзина */
- 
+    
+    .body{
+        width: 100%;
+    }
+    .header-list{
+        margin-left: -17%;
+    }
+
+    .header-profile{
+        margin-left: -15%;
+    }
+    .cart_quantity{
+        font-size: 0.7em;
+    }
+
+    .header-list li{
+        margin-left: -10px;
+    }
